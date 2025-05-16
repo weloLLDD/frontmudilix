@@ -9,7 +9,7 @@ import {
   updateProduct,
 } from "../Redux/Action/ProductAction";
 
-const PlaceOrderScreen = ({ history, match }) => {
+const PlaceOrderScreen = ({ history }) => {
   window.scrollTo(0, 0);
 
 

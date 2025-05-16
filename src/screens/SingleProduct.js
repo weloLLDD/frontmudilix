@@ -6,12 +6,13 @@ import { useDispatch, useSelector } from "react-redux";
 import { listProductDetails } from "../Redux/Action/ProductAction";
 import Loading from "../components/LoadingError/Loading";
 import Message from "./../components/LoadingError/Error";
+import { useParams } from 'react-router-dom';
 
-const SingleProduct = ({ history, match }) => {
+const SingleProduct = ({ history }) => {
   const [qty, setQty] = useState(1); 
  
 
-  const productId = match.params.id;
+  const productId =useParams();
   const dispatch = useDispatch();
 
   const productDetails = useSelector((state) => state.productDetails);

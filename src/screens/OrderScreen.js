@@ -7,11 +7,12 @@ import { getOrderDetails } from "../Redux/Action/OrderAction";
 import Loading from "../components/LoadingError/Loading";
 import Message from "../components/LoadingError/Error";
 import moment from "moment"; 
+import { useParams } from 'react-router-dom';
 
 const OrderScreen = ({ match }) => {
   window.scrollTo(0, 0);
 
-  const orderId = match.params.id;
+  const orderId = useParams();
   const dispatch = useDispatch();
   const orderDetails = useSelector((state) => state.orderDetails);
   const { order, error, loading } = orderDetails;
